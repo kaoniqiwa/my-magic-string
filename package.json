@@ -1,0 +1,31 @@
+{
+  "name": "@kaoniqiwa/my-magic-string",
+  "version": "1.0.0",
+  "main": "./dist/magic-string.cjs.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rm -rf dist && rollup -c",
+    "watch": "rollup -cw"
+  },
+  "keywords": [
+    "string",
+    "string manipulation",
+    "sourcemap",
+    "templating",
+    "transpilation"
+  ],
+  "description": "Modify strings, generate sourcemaps",
+  "repository": "https://github.com/kaoniqiwa/my-magic-string",
+  "author": "kaoniqiwa",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.5",
+    "rollup": "^3.28.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist/*"
+  ]
+}
