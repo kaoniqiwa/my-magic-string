@@ -2,10 +2,13 @@ export default class Chunk {
   constructor(start, end, content) {
     this.start = start;
     this.end = end;
-    this.content = content;
+    this.original = content;
 
     this.intro = '';
     this.outro = '';
+
+    this.content = content;
+    this.edited = false;
 
     if (DEBUG) {
     } else {

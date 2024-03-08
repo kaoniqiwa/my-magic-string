@@ -2,6 +2,7 @@
   "name": "@kaoniqiwa/my-magic-string",
   "version": "1.1.0",
   "main": "./dist/magic-string.cjs.js",
+  "module": "./dist/magic-string.es.js",
   "scripts": {
     "prepare": "npm run build",
     "build": "rm -rf dist && rollup -c",

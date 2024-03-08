@@ -88,5 +88,14 @@ export default class MagicString {
   _split(index) {
     if (this.byStart[index] || this.byEnd[index]) return;
     if (DEBUG) this.stats.time('_split');
+    let chunk = this.lastSearchedChunk;
+    const searchForward = index > chunk.end;
+
+    while (chunk) {
+      if (chunk.contains(index)) return this._splitChunk(chunk, index);
+
+      chunk = searchForward ? this.byStart[chunk.end] : this.byEnd[chunk.start];
+    }
   }
+  _splitChunk(chunk, index) {}
 }
